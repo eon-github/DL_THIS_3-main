@@ -1,0 +1,39 @@
+[
+    {
+      "username": "Maxene",
+      "email": "max_tolentino@gmail.com",
+      "password": "$2b$10$XTw4mThi2hrYINyNg4YBoOMyYtE.mpgeVDb5gO7TS0UG.BrZhe9Xq",
+      "avatar_url": "https://www.shutterstock.com/image-vector/user-profile-icon-vector-avatar-600nw-2247726673.jpg",
+      "description": "Hey there, I'm Maxene, your casual restaurant reviewer! Driven by a love for exploring flavors and sharing culinary gems, I delve into local eateries, providing honest reviews and mouthwatering recommendations. Let's embark on this delicious journey together!"
+    },
+    {
+      "username": "Neo",
+      "email": "neo_rey@gmail.com",
+      "password": "$2b$10$U9cdzdjZe35xfSspnbV4.epvjk3X.J5Tia0TFa/c2ZspBTZwWg7be",
+      "avatar_url": "https://www.shutterstock.com/image-vector/user-profile-icon-vector-avatar-600nw-2247726673.jpg",
+      "description": "Food enthusiast! Always on the lookout for exciting new tastes and techniques. (Description about Neo's passion for food can be added when available)"
+    },
+    {
+      "username": "Fiona",
+      "email": "louise_amores@gmail.com",
+      "password": "$2b$10$ZNtknTTtz17.kxwDUyvQ4.IlvD1EFQp03w76lOmlId.8LLx8yWWLS",
+      "avatar_url": "https://www.shutterstock.com/image-vector/user-profile-icon-vector-avatar-600nw-2247726673.jpg",
+      "description": "Food is my love language! I believe in the power of a delicious meal to connect people and create lasting memories. (Description about Fiona's specific food interests can be further added)"
+    },
+    {
+      "username": "Sophie",
+      "email": "wilbert_villagarcia@gmail.com",
+      "password": "$2b$10$gQTMjGI3KbzWUqdII1jECuLt9DQ2MlnMnP9XriIYUOytp7LdkuMQu",
+      "avatar_url": "https://www.shutterstock.com/image-vector/user-profile-icon-vector-avatar-600nw-2247726673.jpg",
+      "description": "Food adventurer! From exploring local farmers markets to experimenting in the kitchen, I'm passionate about discovering new ingredients and creating culinary masterpieces. (Specific areas of food interest for Sophie can be mentioned here)"
+    },
+    {
+      "username": "Ricky",
+      "email": "juan_delacruz@gmail.com",
+      "password": "$2b$10$/qgQCuEjzKx.8Pu5rrL.EuePYA10k9s5ui4OY3ZzbDxN3iZKhtnD2",
+      "avatar_url": "https://www.shutterstock.com/image-vector/user-profile-icon-vector-avatar-600nw-2247726673.jpg",
+      "description": "Food brings people together! I love the joy of sharing a delicious meal with loved ones and exploring the cultural significance of food. (Specific food cultures or cuisines Ricky enjoys can be included)",
+      "liked":[] 
+    }
+]
+

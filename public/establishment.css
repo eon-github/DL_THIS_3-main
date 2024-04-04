@@ -1,0 +1,477 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow-y: scroll; /* Allow vertical scrolling */
+}
+
+.eggy-form {
+  width: 11%;
+  padding-left: 20px;
+}
+
+#eggy-logo {
+  width: 11%;
+  padding-left: 20px;
+}
+
+.whole {
+  background-image: url();
+  display: flex;
+  overflow: auto;
+}
+.sort-options {
+  left: 0; /* Fix the position to the left */
+  width: 250px; /* Set a fixed width */
+  margin-top: 9%;
+  padding-left: 1%;
+  border: 2px solid #0c382b;
+  margin-left: 2%;
+  height: 50vh;
+  font-family: "Outfit";
+}
+
+.checked {
+  color: orange;
+}
+.stars-rating {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  margin-bottom: 5%;
+  margin-left: 8%;
+}
+#apply-button {
+  margin-top: 5%;
+  width: 90%;
+  padding: 2%;
+  background-color: #ffa800;
+  border-radius: 50px;
+  font-family: "Outfit";
+  font-size: 20px;
+}
+#apply-button:hover {
+  background-color: #ff5300;
+  color: #fff;
+}
+/* Custom styles for the checkbox */
+.custom-checkbox {
+  appearance: none; /* Remove default appearance */
+  width: 20px; /* Make the checkbox bigger */
+  height: 20px;
+  margin-right: 5%;
+  border-radius: 5px; /* Round the corners */
+  background-color: gray;
+  border: black;
+  cursor: pointer; /* Show pointer cursor on hover */
+}
+
+/* Style for the checked state */
+.custom-checkbox:checked {
+  background-color: #ffa800; /* Change background color when checked */
+}
+
+.top-header {
+  display: flex;
+  margin: 0;
+  position: fixed;
+  top: 0;
+  left: 0; /* Ensure it's pinned to the left */
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #ffa800; /* Example background color */
+  color: #fff; /* Example text color */
+  padding: 8px; /* Adjust padding */
+  z-index: 1000; /* Ensure it's above other content */
+}
+.top-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.top-profile {
+  order: 1; /* Move "Home" to the left */
+  display: flex;
+  position: relative;
+  cursor: pointer;
+  background-color: #fff;
+  border: none; /* Remove border */
+  color: #fff;
+  align-items: center;
+  align-content: center;
+  border-radius: 50%;
+  width: 50px; /* Adjust width to whatever you need */
+  height: 50px; /* Adjust height to match width for a perfect circle */
+  margin-right: 3%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#go-profile {
+  display: block;
+  width: 100%;
+  background-color: #ffa800;
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  padding: 10px;
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+#profile-pic {
+  width: 80%;
+  margin-left: 5px;
+  border-radius: 50%;
+}
+.search {
+  display: flex;
+  margin-left: 680px;
+  margin-top: 1%;
+}
+
+/* Adjust other styles as needed */
+
+.search input {
+  height: 40px;
+  width: 300px;
+  margin-top: -1%;
+  border-radius: 50px;
+  padding-left: 20px;
+}
+
+.search-form {
+  display: flex;
+}
+
+.search-input::placeholder {
+  font-family: "Inter";
+  font-size: 22px;
+}
+
+.search-form button {
+  margin-left: 3px;
+  margin-top: -2%;
+  padding: 10px;
+  padding-left: 10px;
+  background-color: #ffa800;
+  color: #fff;
+  font-size: 30px;
+  border-left: none;
+  cursor: pointer;
+  border-radius: 50px;
+  border: none;
+}
+
+.search-form button:hover {
+  color: #ff5300;
+}
+
+#establishment-title {
+  align-items: center;
+  align-content: center;
+  margin-left: 6%;
+  margin-top: 11%;
+  font-size: 30px;
+  margin-bottom: 0;
+  font-family: "Outfit";
+}
+hr {
+  height: 2px; /* Adjust the height as needed */
+  background-color: #e6e6e6; /* Change the color if desired */
+  border: none; /* Remove default border */
+  margin: 20px 0; /* Adjust margin top and bottom */
+  margin-left: 65px;
+  width: 88%;
+}
+.first-line {
+  display: flex;
+  height: 55vh;
+  margin-left: 50px;
+  width: 90%;
+  margin-bottom: 5%;
+}
+a:link {
+  text-decoration: none;
+  color: black;
+}
+a:visited {
+  text-decoration: none;
+  color: black;
+}
+a:hover {
+  text-decoration: none;
+  color: #ff5300;
+}
+a:active {
+  text-decoration: none;
+  color: black;
+}
+.main-list {
+  right: 0;
+  width: 1200px;
+}
+.restos {
+  border: 2px solid #ffa800; /* Added solid border */
+  margin: 0;
+  border-radius: 8%;
+  width: 30%;
+  margin-right: 25px;
+  margin-left: 25px;
+  box-shadow: 0 1px 9px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.2s; /* Add transition for smooth effect */
+}
+.restos:hover {
+  transform: translateY(-5px); /* Move button up slightly */
+  color: #ff5300;
+}
+
+#resto-pic {
+  width: 100%;
+  border-radius: 20px;
+  margin: 0;
+  bottom: 0;
+}
+#resto-name {
+  margin: 0;
+  padding: 0;
+  font-size: 23px;
+  margin-left: 5%;
+  width: 200%;
+  font-family: "Outfit";
+  align-items: center;
+  align-content: center;
+}
+.ratings {
+  align-items: center;
+  align-content: center;
+  display: flex;
+  color: #ffa800;
+  font-family: "Outfit";
+  font-weight: 300;
+}
+#main-rating {
+  align-items: center;
+  margin-left: 15%;
+  margin-right: 5px; /* Adjust the value as needed */
+  color: #ffa800;
+  font-family: "Outfit";
+  font-weight: 300;
+}
+.title-bar-box {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  align-content: center;
+  margin-top: -3%;
+}
+#rate {
+  margin: 0;
+  width: 15%;
+  padding-left: 9px;
+}
+#out-of {
+  color: #ffa800;
+  font-family: "Outfit";
+  font-weight: 300;
+}
+#overall-rating {
+  margin-left: 5px;
+  color: #ffa800;
+  font-family: "Outfit";
+  font-weight: 300;
+}
+.description {
+  text-align: justify;
+  font-family: "Outfit";
+  font-size: 11px;
+  margin: 0;
+  margin-left: 5%;
+  margin-right: 15px;
+  margin-top: -3%;
+  margin-bottom: 10%;
+}
+.footer {
+  background-color: #ffa800;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+}
+#footer-text {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+#gradient {
+  width: 100%;
+  margin-left: -0%;
+  margin-top: -50%;
+  opacity: 50%;
+}
+/* .helpful {
+  margin-left: 55%; 
+  font-size: 15px;
+}
+
+.rating-count {
+  margin-bottom: 20%; 
+}
+
+.thumbs-up-icon,
+.thumbs-down-icon {
+  font-family: "Outfit";
+  font-size: 15px;
+  margin-right: 5px; 
+}
+
+.num-votes {
+  font-size: 18px;
+} */
+
+#home-icon,
+#explore-icon {
+  font-size: 30px;
+  color: #fff;
+  margin-top: 5px;
+  margin-right: 20px; /* Adjust margin as needed */
+}
+#home-icon:hover,
+#explore-icon:hover {
+  color: #ff5300; /* Change color on hover */
+}
+
+.popup-login {
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 1540px;
+  position: absolute;
+  top: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.popup-login-content {
+  height: 300px;
+  width: 500px;
+  background-color: #fff;
+  border-radius: 10px;
+
+  box-sizing: border-box; /* to prevent padding from making the div bigger*/
+  padding: 50px;
+
+  border: 2px solid #ffa800;
+
+  position: relative;
+}
+
+.popup-login-content > img {
+  height: 50px;
+  width: 100px;
+}
+
+.popup-login-content > input {
+  width: 200px;
+  height: 20px;
+  border-radius: 5px;
+  border-width: 1px;
+
+  margin: 20px auto;
+  display: block;
+
+  box-sizing: border-box; /* to prevent padding from making the div bigger*/
+  padding-left: 5px;
+}
+
+.popup-login-content > h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  position: absolute;
+  top: -65px;
+  right: -40px;
+
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #ffa800;
+
+  cursor: pointer;
+}
+
+.login-button {
+  font-family: Arial, Helvetica, sans-serif;
+  border-color: black;
+  border-width: 1px;
+  border-radius: 20px;
+  border-style: solid;
+  padding: 5px 10px;
+  background-color: white;
+  text-align: center;
+  color: black;
+  font-size: 15px;
+  margin-left: 10px;
+}
+
+.login-button:hover {
+  background-color: #ffa800;
+  color: white;
+  border-color: #ffa800;
+}
+
+.popup-signup {
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 1540px;
+  position: absolute;
+  top: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.popup-signup-content {
+  height: 300px;
+  width: 500px;
+  background-color: #fff;
+  border-radius: 10px;
+
+  box-sizing: border-box; /* to prevent padding from making the div bigger*/
+  padding: 15px;
+
+  border: 2px solid #ffa800;
+
+  position: relative;
+}
+
+.popup-signup-content > img {
+  height: 50px;
+  width: 100px;
+}
+
+.popup-signup-content > input {
+  width: 200px;
+  height: 20px;
+  border-radius: 5px;
+  border-width: 1px;
+
+  margin: 20px auto;
+  display: block;
+
+  box-sizing: border-box; /* to prevent padding from making the div bigger*/
+  padding-left: 5px;
+}
+
+.popup-signup-content > h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  position: absolute;
+  top: -65px;
+  right: -40px;
+
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #ffa800;
+
+  cursor: pointer;
+}

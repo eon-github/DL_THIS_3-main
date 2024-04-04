@@ -1,0 +1,33 @@
+<header class="top-header">
+  <img src="./images/LOGO-WT.png" alt="eggy-logo" id="eggy-logo" />
+  <div class="whole-search">
+    <div class="search">
+      <a href="/" class="home-link"><i
+            class="fas fa-home"
+            id="home-icon"
+      ></i></a>
+      <a href="/restaurants">
+          <i class="material-icons" id="explore-icon">explore</i>
+        </a>
+      <form class="search-form">
+        <input type="text" placeholder="Search..." class="search-input" />
+        <button type="submit"><i class="fa fa-search"></i></button>
+      </form>
+    </div>
+  </div>
+  <div class="top-profile" id="top-profile">
+    {{#if loginData}}
+    <img src="{{loginData.avatar_url}}" alt="profile-pic" id="profile-pic" />
+      <div id="options" class="options">
+        <a href = "userProfile"><button class="go-profile">Go to Profile</button></a>
+        <button onclick="showLogIn()" id="login">Log-Out</button>
+      </div>
+    {{else}}
+    <img src="./images/profile-pic.jpg" alt="profile-pic" id="profile-pic" />
+      <div id="options" class="options">
+        <button onclick="showSignup()" class="go-profile">Sign Up</button>
+        <button onclick="showLogIn()" id="login">Log-in</button>
+      </div>
+    {{/if}}
+  </div>
+</header>

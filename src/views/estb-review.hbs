@@ -1,0 +1,690 @@
+{{> header}}
+      </div>
+      {{#each restoData}}
+      <div class="establishment">
+        <div class="establishment-left">
+          <div class="establishment-top-left">
+            <div class="establishment-profile">
+              <img src="{{restoPic}}" class="chimmy-photo">
+              <div class="establishment-profile-text">
+                <div class="owner-diamond">
+                  <h3 class="establishment-name">
+                    {{restoName}}
+                  </h3>
+                  <img src="images/diamond.png" alt="" class="diamond-photo">
+                </div>
+                <h4 class="establishment-username">
+                  {{restoUser}}
+                </h4>
+              </div>
+            </div>
+          </div>  
+          <div class="establishment-top-right">
+            <span class="rating-font">{{main_rating}}</span> out of 5 <br>
+            {{#each rating-stars}}
+            <img src="images/star.png" alt="" class="stars">
+            {{/each}}
+          </div>
+          <div class ="establishment-desc">
+            <h2 class="resto-name">
+              {{restoName}}
+            </h2> 
+             {{description}}
+          </div>
+        </div>
+        <div class="establishment-right">
+          <div class="establishment-right-content">
+            <!--image slider start-->
+            <div class="slider">
+              <div class="slides">
+                <!--radio buttons start-->
+                <input type="radio" name="radio-btn" id="radio1">
+                <input type="radio" name="radio-btn" id="radio2">
+                <input type="radio" name="radio-btn" id="radio3">
+                <!--radio buttons end-->
+                <!--slide images start-->
+                <div class="slide first">
+                  <img src="images/chimmy-1.jpg" alt="">
+                </div>
+                <div class="slide">
+                  <img src="images/chimmy-2.jpg" alt="">
+                </div>
+                <div class="slide">
+                  <img src="images/chimmy-3.png" alt="">
+                </div>
+                <!--slide images end-->
+                <!--automatic navigation start-->
+                <div class="navigation-auto">
+                  <div class="auto-btn1"></div>
+                  <div class="auto-btn2"></div>
+                  <div class="auto-btn3"></div>
+                </div>
+                <!--automatic navigation end-->
+              </div>
+              <!--manual navigation start-->
+              <div class="navigation-manual">
+                <label for="radio1" class="manual-btn"></label>
+                <label for="radio2" class="manual-btn"></label>
+                <label for="radio3" class="manual-btn"></label>
+              </div>
+              <!--manual navigation end-->
+            </div>
+            <!--image slider end-->
+            <!-- Automatic Script Slider>
+            <script type="text/javascript">
+            var counter = 1;
+            setInterval(function(){
+              document.getElementById('radio' + counter).checked = true;
+              counter++;
+              if(counter > 4){
+                counter = 1;
+              }
+            }, 5000);
+            </script>
+            <!-->
+          </div>
+        </div>
+      </div>
+      {{/each}}
+
+        <button class ="post-popup"> Post</button>
+          <dialog class="post-popup-container">
+
+            <div class="post-popup-box">
+
+              <button class ="post-popup-close-button">  X </button> 
+
+              <div class="post-popup-first-row">
+                <div class="post-popup-profile">
+                  <img src="images/profile-pic.jpg" alt="" class="post-popup-profile-photo">
+                </div>
+                <div class="post-popup-rating">
+                  <div class="rating-random">
+                    <div class="rating-1">
+                      <div class="rating-food">
+                        <div class="food-text-2">
+                          Food
+                        </div>
+                            <div class="rating-box">
+                            <div class="stars">
+                              <i id="food" class="fa-solid fa-star"></i>
+                              <i id="food" class="fa-solid fa-star"></i>
+                              <i id="food" class="fa-solid fa-star"></i>
+                              <i id="food" class="fa-solid fa-star"></i>
+                              <i id="food" class="fa-solid fa-star"></i>
+                            </div>
+                          </div>
+                      </div>
+                      <div class="rating-ambiance">
+                        <div class="ambiance-text-2">
+                          Ambiance
+                        </div>
+                            <div class="rating-box">
+                            <div class="stars">
+                              <i id="ambiance" class="fa-solid fa-star"></i>
+                              <i id="ambiance" class="fa-solid fa-star"></i>
+                              <i id="ambiance" class="fa-solid fa-star"></i>
+                              <i id="ambiance" class="fa-solid fa-star"></i>
+                              <i id="ambiance" class="fa-solid fa-star"></i>
+                            </div>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="rating-random-2">
+                    <div class="rating-2">
+                      <div class="rating-service">
+                        <div class="service-text-2">
+                        Service
+                        </div>
+                            <div class="rating-box">
+                            <div class="stars" id="service">
+                              <i id="service" class="fa-solid fa-star"></i>
+                              <i id="service" class="fa-solid fa-star"></i>
+                              <i id="service" class="fa-solid fa-star"></i>
+                              <i id="service" class="fa-solid fa-star"></i>
+                              <i id="service" class="fa-solid fa-star"></i>
+                            </div>
+                          </div>
+                      </div>
+                      <div class="rating-overall">
+                        <div class="overall-text-2">
+                          Overall
+                        </div>
+                            <div class="rating-box">
+                            <div class="stars">
+                              <i id="overall" class="fa-solid fa-star"></i>
+                              <i id="overall" class="fa-solid fa-star"></i>
+                              <i id="overall" class="fa-solid fa-star"></i>
+                              <i id="overall" class="fa-solid fa-star"></i>
+                              <i id="overall" class="fa-solid fa-star"></i>
+                            </div>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="post-popup-middle">
+
+              <div class = "post-popup-title">
+                <label class ="custom-field" for="title"> 
+                <input type="text" id="title" name="title" required>
+                <span class="placeholder">Enter Title</span>
+                </label>
+              </div>
+                <div class="post-popup-desc">
+                 <textarea class="textarea" placeholder="Type your comment here..."></textarea>
+                </div>
+                
+              </div>
+
+              <div class="post-popup-bottom-container">
+                <div class="post-popup-bottom">
+                  <div class="imageleft">
+                    
+                      <label for="file-input">
+                      <img src="images/add-pic.png" alt="" class="addphoto">
+                    </label>
+                    <input id="file-input" type="file" style="display: none;">
+                    
+                  </div>
+                  <div class="save-post">
+                    <button class ="save-post-popup"> Post</button>
+                  </div>
+                </div>
+              </div>
+      
+
+            </div>
+
+        </dialog> 
+      </div>
+      <div class="review-line">
+        <h2 class="reviews">
+          REVIEWS
+        </h2> 
+        <div class="whole-search">
+          
+        <div class="search">
+
+          <form class="search-form">
+            <input type="text" placeholder="Search..." class="search-input">
+            <button type="submit"><i class="fa fa-search"></i></button>
+          </form>
+        </div>
+        
+        </div>
+      </div>
+
+      {{#each commentData}}
+      <div class="review">
+        <div class="review-whole">
+          <div class="review-left">
+            <div class="review-left-top">
+              <div class="review-left-top-profile">
+                <div class="review-left-top-profile-photo">
+                  <img src="{{user-img}}" alt="" class="review-profile-photo">
+                  </div>
+                <div class="review-left-top-profile-text">
+                  <div class="review-profile-name">
+                    {{name}} 
+                  </div>
+                  <div class="review-username">
+                    {{username}}
+                  </div>
+                </div>  
+
+                <div class="settings">
+
+                  <div class="dropdown">
+                    <button class="settings-button"> <img src="https://i.stack.imgur.com/twIm6.png" class="settings-photo"></button>
+                    <div class="content">
+                        <button class = "edit-button">Edit</button>
+
+                        <dialog class="edit-popup-container">
+                          <div class="edit-popup-box">
+                            <div class="edit-toprow">
+                              <div class="edit-close-button-container">
+                                <button class ="edit-popup-close-button">  X </button> 
+                              </div>
+                              <div class="edit-popup-header">
+                                Edit Post
+                              </div>
+                              {{!-- <div class="edit-save-popup-button">
+                                <button class = "edit-save-button">Save</button>
+                              </div> --}}
+                            </div>
+                            
+              
+                            <div class="post-popup-first-row">
+                <div class="post-popup-profile">
+                  <img src="images/profile-pic.jpg" alt="" class="post-popup-profile-photo">
+                </div>
+                <div class="post-popup-rating">
+                  <div class="rating-random">
+                    <div class="rating-1">
+                      <div class="rating-food">
+                        <div class="food-text-2">
+                          Food
+                        </div>
+                            <div class="rating-box">
+                            <div class="stars">
+                              <i id="food" class="fa-solid fa-star"></i>
+                              <i id="food" class="fa-solid fa-star"></i>
+                              <i id="food" class="fa-solid fa-star"></i>
+                              <i id="food" class="fa-solid fa-star"></i>
+                              <i id="food" class="fa-solid fa-star"></i>
+                            </div>
+                          </div>
+                      </div>
+                      <div class="rating-ambiance">
+                        <div class="ambiance-text-2">
+                          Ambiance
+                        </div>
+                            <div class="rating-box">
+                            <div class="stars">
+                              <i id="ambiance" class="fa-solid fa-star"></i>
+                              <i id="ambiance" class="fa-solid fa-star"></i>
+                              <i id="ambiance" class="fa-solid fa-star"></i>
+                              <i id="ambiance" class="fa-solid fa-star"></i>
+                              <i id="ambiance" class="fa-solid fa-star"></i>
+                            </div>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="rating-random-2">
+                    <div class="rating-2">
+                      <div class="rating-service">
+                        <div class="service-text-2">
+                        Service
+                        </div>
+                            <div class="rating-box">
+                            <div class="stars" id="service">
+                              <i id="service" class="fa-solid fa-star"></i>
+                              <i id="service" class="fa-solid fa-star"></i>
+                              <i id="service" class="fa-solid fa-star"></i>
+                              <i id="service" class="fa-solid fa-star"></i>
+                              <i id="service" class="fa-solid fa-star"></i>
+                            </div>
+                          </div>
+                      </div>
+                      <div class="rating-overall">
+                        <div class="overall-text-2">
+                          Overall
+                        </div>
+                            <div class="rating-box">
+                            <div class="stars">
+                              <i id="overall" class="fa-solid fa-star"></i>
+                              <i id="overall" class="fa-solid fa-star"></i>
+                              <i id="overall" class="fa-solid fa-star"></i>
+                              <i id="overall" class="fa-solid fa-star"></i>
+                              <i id="overall" class="fa-solid fa-star"></i>
+                            </div>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="post-popup-middle">
+
+              <div class = "post-popup-title">
+                <label class ="custom-field" for="title"> 
+                <input type="text" id="title" name="title" required>
+                <span class="placeholder">Enter Title</span>
+                </label>
+              </div>
+                <div class="post-popup-desc">
+                 <textarea class="textarea" placeholder="Type your comment here..."></textarea>
+                </div>
+                
+              </div>
+
+              <div class="post-popup-bottom-container">
+                <div class="post-popup-bottom">
+                  <div class="imageleft">
+                    
+                      <label for="file-input">
+                      <img src="images/add-pic.png" alt="" class="addphoto">
+                    </label>
+                    <input id="file-input" type="file" style="display: none;">
+                    
+                  </div>
+                  <div class="save-post">
+                    <button class ="save-post-popup-edit"> Save</button>
+                  </div>
+                </div>
+              </div>
+      
+                    
+              
+                          </div>
+              
+                      </dialog> 
+
+
+                        <button class = "del-button">Delete</button>
+
+                        <dialog class = "delete-popup-container">
+                          <div class="delete-whole">
+                            <div class="delete-header">
+                              DELETE POST?
+                            </div>
+                            <div class="delete-middle">
+                              This can't be undone and it will be removed from your profile, the timeline of any accounts that follow you, and from search results.
+                            </div>
+                            <div class="delete-bottom">
+                              <button class = "confirm-del-button">Delete</button>
+                              <button class = "cancel-del-button"> Cancel </button>
+                            </div>
+                          </div>
+                          
+
+                        </dialog>
+                    </div>
+                </div>
+                  
+                  <br>
+                  {{date}}
+
+
+                </div>
+              </div>
+              <div class="review-title">
+                {{title}}
+              </div>
+              <div class="review-desc">
+                {{content}}
+              </div>
+            <div class="rating-random">
+              <div class="rating-1">
+                <div class="rating-food">
+                  <div class="food-text">
+                    Food12313
+                  </div>
+                  <div class="stars-rating">
+                  {{#each food-stars}}
+                    <img src="images/star.png" alt="" class="stars-1">
+                  {{/each}}
+
+                  </div>
+                </div>
+                <div class="rating-ambiance">
+                  <div class="ambiance-text">
+                    Ambiance
+                  </div>
+                  <div class="stars-rating">
+                  {{#each ambiance-stars}}
+                    <img src="images/star.png" alt="" class="stars-1">
+                  {{/each}}
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="rating-random-2">
+              <div class="rating-2">
+                <div class="rating-service">
+                  <div class="service-text">
+
+                  Service
+                  </div>
+                  <div class="stars-rating">
+                  {{#each service-stars}}
+                    <img src="images/star.png" alt="" class="stars-1">
+                  {{/each}}
+                  </div>
+                </div>
+                <div class="rating-overall">
+                  <div class="overall-text">
+
+                    Overall
+                  </div>
+                  <div class="stars-rating">
+                  {{#each overall-stars}}
+                    <img src="images/star.png" alt="" class="stars-1">
+                  {{/each}}
+                  </div>
+                </div>
+              </div>
+              {{#unless ownerReplyStatus}}
+              <div class="owner-reply-whole">
+                <div class="owner-reply">
+                  <button class ="owner-reply-button">Owner Reply</button>
+                  <dialog class="owner-reply-container">
+        
+                      <button class ="owner-popup-close-button">  X </button> 
+        
+                      <div class="post-popup-first-row">
+                        <div class="post-popup-profile">
+                          <img src="images/profile-pic.jpg" alt="" class="post-popup-profile-photo">
+                        </div>
+                        <div class="owner-popup-profile">
+                          <div class="establishment-profile-text">
+                            <div class="owner-diamond">
+                              <h3 class="establishment-name">
+                                Establishment Owner
+                              </h3>
+                              <img src="images/diamond.png" alt="" class="diamond-photo">
+                            </div>
+                            <h4 class="establishment-username">
+                              @username
+                            </h4>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="owner-popup-middle">
+                        <div class="post-popup-desc">
+                          <textarea class="textarea" placeholder="Type your comment here..."></textarea>
+                        </div>
+                        
+                      </div>
+        
+                      <div class="post-popup-bottom-container">
+                        <div class="post-popup-bottom">
+                          <div class="imageleft">
+
+                          </div>
+                          <div class="save-post">
+                            <button class ="owner-save-post-popup"> Post</button>
+                          </div>
+                        </div>
+                      </div>
+              
+        
+                  </dialog>
+                </div>
+              </div>
+
+              {{/unless}}
+            </div>
+          </div>
+        </div>
+          <div class="review-right">
+            <div class="review-pic">
+              <img src="{{comment-img}}" alt="" class="review-photo">
+            </div>
+            <div class="vote">
+
+              <div class="post-ratings-container">
+                <div class="post-rating">
+                 <span class="helpful">Helpful? </span>  
+                  <span class="post-rating-button material-icons">thumb_up</span>
+                  <span class="post-rating-count">{{numLike}}</span>
+                </div>
+                <div class="post-rating">
+                  <span class="post-rating-button material-icons">thumb_down</span>
+                  <span class="post-rating-count">{{numDislike}}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>  
+
+
+        {{#if ownerReplyStatus}}
+        <div class="owner-comment">
+          <div class="owner-review">
+            <div class="establishment-profile">
+              <img src="images/chimmy.jpeg" class="chimmy-photo">
+              <div class="establishment-profile-text">
+                <div class="owner-diamond">
+                  <h3 class="establishment-name">
+                    Chimmy Original Filipino Blend Yogurt
+                  </h3>
+                  <img src="images/diamond.png" alt="" class="diamond-photo">
+                </div>
+                <h4 class="establishment-username">
+                  @chimmy.ph
+                </h4>
+              </div>
+              <div class="owner-settings">
+                <div class="dropdown-1">
+                  <button class="settings-button"> 
+                    <span class="material-symbols-outlined">
+                    more_horiz
+                    </span>
+                  </button>
+                  <div class="content">
+                      <button class = "edit-button-2">Edit</button>
+
+                      <dialog class="edit-popup-container-2">
+                        <div class="edit-popup-box">
+                          <div class="edit-toprow">
+                            <div class="edit-close-button-container">
+                              <button class ="edit-popup-close-button-2">  X </button> 
+                            </div>
+                            <div class="edit-popup-header">
+                              Edit Post
+                            </div>
+                            <div class="edit-save-popup-button-2">
+                              <button class = "edit-save-button-2">Save</button>
+                            </div>
+                          </div>
+                          
+            
+                          <div class="edit-popup-first-row">
+                            <div class="edit-popup-profile">
+                              <img src="images/profile-pic.jpg" alt="" class="post-popup-profile-photo">
+                            </div>
+                            <div class="edit-popup-rating">
+                              <div class="rating-random">
+                                <div class="rating-1">
+                                  <div class="rating-food">
+                                    <div class="food-text">
+                                      Food
+                                    </div>
+                                    
+                                    <div class="stars-rating">
+                                      <img src="images/star.png" alt="" class="stars-1">
+                                      <img src="images/star.png" alt="" class="stars-1">
+                                      <img src="images/star.png" alt="" class="stars-1">
+                                      <img src="images/star.png" alt="" class="stars-1">
+                                    </div>
+                                  </div>
+                                  <div class="rating-ambiance">
+                                    <div class="ambiance-text">
+                                      Ambiance123
+                                    </div>
+                                    
+                                    <div class="stars-rating">
+                                      <img src="images/star.png" alt="" class="stars-1">
+                                      <img src="images/star.png" alt="" class="stars-1">
+                                      <img src="images/star.png" alt="" class="stars-1">
+                                      <img src="images/star.png" alt="" class="stars-1">
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="rating-random-2">
+                                <div class="rating-2">
+                                  <div class="rating-service">
+                                    <div class="service-text">
+                                      Service
+                                    </div>
+                                    
+                                    <div class="stars-rating">
+                                      <img src="images/star.png" alt="" class="stars-1">
+                                      <img src="images/star.png" alt="" class="stars-1">
+                                      <img src="images/star.png" alt="" class="stars-1">
+                                      <img src="images/star.png" alt="" class="stars-1">
+                                    </div>
+                                  </div>
+                                  <div class="rating-overall">
+                                    <div class="overall-text">
+                                      Overall
+                                    </div>
+                                    <div class="stars-rating">
+                                      <img src="images/star.png" alt="" class="stars-1">
+                                      <img src="images/star.png" alt="" class="stars-1">
+                                      <img src="images/star.png" alt="" class="stars-1">
+                                      <img src="images/star.png" alt="" class="stars-1">
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="edit-popup-middle">
+                            <div class="edit-popup-title">
+                              Title
+                            </div>
+                            <div class="edit-popup-desc">
+                              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laboru
+                            </div>
+                            <div class="edit-popup-photos">
+                              <img src="{images/chimmy-review.jpg}" alt="" class="edit-photo">
+                              <img src="images/chimmy-review-2.jpg" alt="" class="edit-photo">
+                            </div>
+                          </div>
+    
+                  
+            
+                        </div>
+            
+                    </dialog> 
+
+
+                      <button class = "del-button-2">Delete</button>
+
+                      <dialog class = "delete-popup-container-2">
+                        <div class="delete-whole">
+                          <div class="delete-header">
+                            DELETE POST?
+                          </div>
+                          <div class="delete-middle">
+                            This can't be undone and it will be removed from your profile, the timeline of any accounts that follow you, and from search results.
+                          </div>
+                          <div class="delete-bottom">
+                            <button class = "confirm-del-button-2">Delete</button>
+                            <button class = "cancel-del-button-2"> Cancel </button>
+                          </div>
+                        </div>
+                        
+
+                      </dialog>
+                  </div>
+              </div>
+              <h3 class="date-owner">
+                February 8, 2024
+              </h3>
+              </div>
+            </div>
+            <div class="owner-text">
+              Thank you so much for your kind words! We're thrilled to hear that you enjoyed your experience at Chimmy. Our team works hard to provide a wide variety of high-quality yogurt options in a welcoming atmosphere, and it's wonderful to know that our efforts are appreciated. We're always striving to exceed expectations and create memorable moments for our customers. We hope to welcome you back soon for another delightful yogurt adventure!            </div>
+          </div>
+        </div>
+        {{/if}}
+      </div>
+    {{/each}}
+
+<div class="popup-login">
+    {{> popup-login}}
+</div>
+
+<div class="popup-signup">
+    {{> popup-signup}}
+</div>
+
+

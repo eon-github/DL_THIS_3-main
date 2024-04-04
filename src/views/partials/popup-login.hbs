@@ -1,0 +1,31 @@
+
+<!--POPUP-LOGIN-->
+
+{{#if loginData}}
+    <!-- Code for login data not null -->
+    <form
+        name="logout"
+        action="/logout-user"
+        method="POST"
+        class="popup-login-content"
+    >
+        <h1 onclick="closeLogIn()" id="close-login" type="submit">x</h1>
+        <img src="/images/LOGO-YL.png" alt="None" />
+        <input id="userlogin" name="userlogin" type="text" readonly value="{{loginData.username}}">
+        <input id="passlogin" name="passlogin" type="password" readonly value="{{loginData.password}}">
+        <button class="login-button bold" type="submit" onclick="">Log Out</button>
+    </form>
+{{else}}
+    <form
+        name="login"
+        action="/read-user"
+        method="POST"
+        class="popup-login-content"
+    >
+        <h1 onclick="closeLogIn()" id="close-login" type="submit">x</h1>
+        <img src="/images/LOGO-YL.png" alt="None" />
+        <input id="userlogin" name="userlogin" type="text" placeholder="Enter Username" required></input>
+        <input id="passlogin" name="passlogin" type="password" placeholder="Enter Password" required></input>
+        <button class="login-button bold" type="submit" onclick="">Log in</button>
+    </form>
+{{/if}}

@@ -1,0 +1,93 @@
+[
+    {
+        "username" : "Wilbert Villagarcia", 
+        "feedback" : "I would like to eat here forever!", 
+        "rating" : 4,
+        "restaurant" : "24 Chicken" 
+    },
+    {
+        "username" : "Neo Rey", 
+        "feedback" : "I would like to eat here!", 
+        "rating" : 3,
+        "restaurant" : "24 Chicken" 
+    },
+    {
+        "username" : "Louise Amores", 
+        "feedback" : "I don't like it here!", 
+        "rating" : 1,
+        "restaurant" : "24 Chicken" 
+    },
+    {
+        "username" : "Maxene Tolentino", 
+        "feedback" : "I would like to eat here forever!", 
+        "rating" : 4,
+        "restaurant" : "Tea Cup Zone" 
+    },
+    {
+        "username" : "Wilbert Villagarcia", 
+        "feedback" : "I would like to eat here!", 
+        "rating" : 3,
+        "restaurant" : "Tea Cup Zone" 
+    },
+    {
+        "username" : "Maxene Tolentino", 
+        "feedback" : "I like it here", 
+        "rating" : 5,
+        "restaurant" : "Tea Cup Zone" 
+    },
+    {
+        "username" : "Maxene Tolentino", 
+        "feedback" : "Masarap", 
+        "rating" : 5,
+        "restaurant" : "Chimmy" 
+    },
+    {
+        "username" : "Neo Rey", 
+        "feedback" : "I hate it here", 
+        "rating" : 1,
+        "restaurant" : "Chimmy" 
+    },
+    {
+        "username" : "Louise Amores", 
+        "feedback" : "I don't like it here!", 
+        "rating" : 1,
+        "restaurant" : "Chimmy" 
+    },
+    {
+        "username" : "Wilbert Villagarica", 
+        "feedback" : "It's Alright", 
+        "rating" : 5,
+        "restaurant" : "Jus & Jerry's"
+    },
+    {
+        "username" : "Neo Rey", 
+        "feedback" : "I love it here", 
+        "rating" : 5,
+        "restaurant" : "Jus & Jerry's"
+    },
+    {
+        "username" : "Louise Amores", 
+        "feedback" : "I love it here!", 
+        "rating" : 5,
+        "restaurant" : "Jus & Jerry's"
+    },
+
+    {
+        "username" : "Wilbert Villagarica", 
+        "feedback" : "THE BEST ", 
+        "rating" : 5,
+        "restaurant" : "Dimsum Treats"
+    },
+    {
+        "username" : "Neo Rey", 
+        "feedback" : "THE BEST HERE", 
+        "rating" : 5,
+        "restaurant" : "Dimsum Treats"
+    },
+    {
+        "username" : "Maxene Tolentino", 
+        "feedback" : "Nakakasawa", 
+        "rating" : 1,
+        "restaurant" : "Dimsum Treats"
+    }
+]
