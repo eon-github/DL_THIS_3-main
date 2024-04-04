@@ -1,6 +1,6 @@
 const express = require("express");
 const { MongoClient } = require("mongodb");
-const uri = "mongodb://127.0.0.1:27017/eggyDB";
+const uri = "mongodb+srv://neoxdg:W5B6sfHkGOWuIj3u@eggydb.bwuccr2.mongodb.net/?retryWrites=true&w=majority&appName=EggyDB";
 
 const bcrypt = require("bcrypt");
 const saltRounds = 10;

@@ -27,7 +27,7 @@ const feedbacks = JSON.parse(rawData3);
 const rawData4 = fs.readFileSync("src/models/comment.json");
 const rawComments = JSON.parse(rawData4);
 
-const uri = "mongodb://127.0.0.1:27017/eggyDB";
+const uri = "mongodb+srv://neoxdg:W5B6sfHkGOWuIj3u@eggydb.bwuccr2.mongodb.net/?retryWrites=true&w=majority&appName=EggyDB"
 
 const hbs = exphbs.create({
   extname: ".hbs",
