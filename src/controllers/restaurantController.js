@@ -383,6 +383,73 @@ app.get("/userProfile", async (req, res) => {
 
 
 
+app.post('/update-comment', function (req, resp) {
+  console.log("RECEIVED", req.body);
+
+  // Parse the received ratings data
+  const ratingsData = req.body;
+
+  // Initialize objects to store ratings for each category
+  const foodRatings = {};
+  const serviceRatings = {};
+  const ambianceRatings = {};
+  const overallRatings = {};
+
+  // Iterate over the keys of ratingsData
+  for (const key in ratingsData) {
+      // Check the category of the rating based on the key prefix
+      if (key.startsWith('food-')) {
+          const id = key.slice(5); // Remove the 'food-' prefix to get the id
+          foodRatings[id] = ratingsData[key];
+      } else if (key.startsWith('service-')) {
+          const id = key.slice(8); // Remove the 'service-' prefix to get the id
+          serviceRatings[id] = ratingsData[key];
+      } else if (key.startsWith('ambiance-')) {
+          const id = key.slice(9); // Remove the 'ambiance-' prefix to get the id
+          ambianceRatings[id] = ratingsData[key];
+      } else if (key.startsWith('overall-')) {
+          const id = key.slice(8); // Remove the 'overall-' prefix to get the id
+          overallRatings[id] = ratingsData[key];
+      }
+  }
+
+  // Extract document ID, title, and description
+  const { id, title, desc } = req.body;
+
+  // Update the document in the database
+  commentModel.findById(id).then(function (updateResult) {
+      if (!updateResult) {
+          console.log("No matching document found." + id);
+          return resp.status(404).send("No matching document found" + id);
+      }
+
+      console.log(updateResult);
+      updateResult.title = title;
+      updateResult.content = desc;
+      updateResult['food-rating'] = foodRatings[0];
+      updateResult['service-rating'] = serviceRatings[0];
+      updateResult['ambiance-rating'] = ambianceRatings[0];
+      updateResult['overall-rating'] = overallRatings[0];
+
+      // Save the updated document
+      updateResult.save().then(function (updateSaved) {
+          if (updateSaved) {
+              console.log("Update successful");
+              // Send the updated comment data as JSON response
+              resp.json(updateResult);
+          } else {
+              console.log("Update failed");
+              resp.status(500).send("Update failed");
+          }
+      }).catch(function (error) {
+          console.error("Error saving update:", error);
+          resp.status(500).send("Error saving update");
+      });
+  }).catch(function (error) {
+      console.error("Error finding document:", error);
+      resp.status(500).send("Error finding document");
+  });
+});
 
 
 

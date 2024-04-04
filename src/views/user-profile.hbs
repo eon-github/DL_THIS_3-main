@@ -52,7 +52,6 @@
                                 </div>
                                 <hr>
                             </div>
-                            
                         </div>
                         {{/each}}
                         <div class="bottom-middle-container">
@@ -106,6 +105,11 @@
                                                                                 more_horiz
                                                                                 </span>
                                                                         </button>
+
+
+                                                                        
+
+
                                                                         <div class="content">
                                                                             
                                                                         <button class="edit-button">Edit</button>
@@ -246,7 +250,7 @@
                                                 </div>
                                                 <div class="bottom-left-middle-container">
                                                     <div class="bottom-left-middle-title-container">
-                                                        <div class="bottom-left-middle-title">
+                                                        <div class="bottom-left-middle-title" id="title-{{@index}}">
                                                             {{title}}
                                                         </div>
                                                     </div>
@@ -264,7 +268,7 @@
                                                               Food
                                                             </div>
                                                             
-                                                            <div class="stars-rating">
+                                                            <div class="stars-rating" id="food-{{@index}}">
                                                                 {{#each food-stars}}
                                                               <img src="images/star.png" alt="" class="stars-1">
                                                                 {{/each}}

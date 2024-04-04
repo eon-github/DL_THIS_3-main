@@ -87,6 +87,7 @@ function addModalHandlers(buttonClass, modalClass, closeClass, saveClass) {
       saveButtons.forEach((saveButton, index) => {
           saveButton.addEventListener('click', () => {
               modals[index].close();
+              
           });
       });
   }
@@ -96,6 +97,22 @@ function addModalHandlers(buttonClass, modalClass, closeClass, saveClass) {
 addModalHandlers('.edit-button', '.edit-popup-container', '.edit-popup-close-button', 'save-post-popup-edit');
 addModalHandlers('.del-button', '.delete-popup-container', '.confirm-del-button', '.cancel-del-button');
 addModalHandlers('.owner-reply-button', '.owner-reply-container', '.owner-popup-close-button', '.owner-save-post-popup');
+
+function saveEdit(saveClass){
+    const saveButtons = document.querySelectorAll(saveClass);
+
+    if (saveClass) {
+        saveButtons.forEach((saveButton, index) => {
+            saveButton.addEventListener('click', () => {
+                
+
+
+
+            });
+        });
+    }
+
+}
 
 
 
@@ -143,7 +160,8 @@ function handleSubmit(event) {
   // Check if all ratings are provided
   const requiredRatings = ['food', 'service', 'ambiance', 'overall'];
   const suffixes = [...Array(modals.length).keys()];
-
+ 
+  food-2
   console.log(suffixes);
   for (const ratingType of requiredRatings) {
       let ratingProvided = false;
@@ -166,11 +184,25 @@ function handleSubmit(event) {
   sendDataToServer(mergedData);
 
   // Close the modal associated with the form
+
+
   
   const form = event.target;
   const modalId = form.dataset.modalId; // Retrieve the modal ID from the data attribute
+  $("#title-" + modalId).html(data.title);
+  const foodStars = `<img src="images/star.png" alt="" class="stars-1"></img>`.repeat(latestRatings['food-' + modalId])
+  console.log("food stars", foodStars)
+  $("#food-" + modalId).html(foodStars);
+
+  
   console.log("MODAL ID: ", modalId); 
   modals[modalId].close();
+
+
+
+
+
+ 
 }
 
 
@@ -198,6 +230,7 @@ document.querySelectorAll('.stars').forEach(starsContainer => {
         star.addEventListener("click", () => {
             const starsInContainer = document.querySelectorAll(`#${starsContainer.id} .fa-solid.fa-star`);
             handleStarClick(starsInContainer, index1, ratingType);
+            console.log(ratingType)
         });
     });
 });
@@ -207,3 +240,5 @@ const forms = document.querySelectorAll('form[name="update-comment"]');
 forms.forEach(form => {
     form.addEventListener('submit', handleSubmit);
 });
+
+
