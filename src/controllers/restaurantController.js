@@ -234,7 +234,7 @@ module.exports = function (app, app_data) {
         }
 
         const client = await MongoClient.connect(uri);
-        const dbo = client.db("eggyDB");
+        const dbo = client.db("process.env.DB_NAME");
         const collName = dbo.collection("users");
 
         const users = await userModel.find({}, "username email").lean();
@@ -287,7 +287,7 @@ module.exports = function (app, app_data) {
   app.post("/read-user", async (req, res) => {
     try {
       const client = await MongoClient.connect(uri);
-      const dbo = client.db("eggyDB");
+      const dbo = client.db("process.env.DB_NAME");
       const collName = dbo.collection("users");
 
       const searchQuery = {
@@ -463,7 +463,7 @@ app.get("/chimmy", function (req, resp) {
   MongoClient.connect(uri)
     .then((client) => {
       console.log("Connected to MongoDB");
-      const dbo = client.db("eggyDB"); // Get the database object
+      const dbo = client.db("process.env.DB_NAME"); // Get the database object
       const collName = dbo.collection("comments"); // Get the collection
       const cursor = collName.find({}); // Find all documents in the collection
 
