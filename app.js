@@ -27,7 +27,7 @@ const feedbacks = JSON.parse(rawData3);
 const rawData4 = fs.readFileSync("src/models/comment.json");
 const rawComments = JSON.parse(rawData4);
 
-const uri = process.env.MONGODB_URI;
+const uri = "mongodb+srv://neodg:lo33jKXpU6JjvrA4@eggydb.bwuccr2.mongodb.net/"
 
 const hbs = exphbs.create({
   extname: ".hbs",
