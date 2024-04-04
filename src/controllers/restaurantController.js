@@ -1,6 +1,6 @@
 const express = require("express");
 const { MongoClient } = require("mongodb");
-const uri = "mongodb+srv://neoxdg:W5B6sfHkGOWuIj3u@eggydb.bwuccr2.mongodb.net/?retryWrites=true&w=majority&appName=EggyDB";
+const uri = process.env.MONGODB_URI;
 
 const bcrypt = require("bcrypt");
 const saltRounds = 10;
@@ -8,7 +8,7 @@ const saltRounds = 10;
 async function connectToDB() {
   try {
     const client = await MongoClient.connect(uri);
-    return client.db("eggyDB");
+    return client.db("process.env.DB_NAME");
   } catch (error) {
     console.error("Error connecting to MongoDB:", error);
     throw error;
