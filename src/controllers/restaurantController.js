@@ -1,6 +1,6 @@
 const express = require("express");
 const { MongoClient } = require("mongodb");
-const uri = mongodb+srv://neodg:lo33jKXpU6JjvrA4@eggydb.bwuccr2.mongodb.net/;
+const uri = "mongodb+srv://neodg:lo33jKXpU6JjvrA4@eggydb.bwuccr2.mongodb.net/"
 
 const bcrypt = require("bcrypt");
 const saltRounds = 10;
