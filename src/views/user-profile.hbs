@@ -1,0 +1,383 @@
+{{> header}}
+    <div class="whole-container">
+        <div class="whole">
+                <div class="left-container">
+                    <div class="left">
+                        {{#each userData}}
+                        <div class="top-profile-container">
+                            <div class="top-div-profile">
+                                <div class="top-left-profile">
+                                    <img src="{{avatar_img}}" alt="" class="top-left-profile-photo">
+                                </div>
+                                <div class="top-middle-profile">
+                                    <div class="top-middle-profile-name">
+                                        {{username}}
+                                    </div>
+                                </div>
+                                <div class="top-right-profile">
+                                    <div class="top-right-profile-edit-container">
+                                        <div class="top-right-profile-edit">
+                                            <button id="myBtn">Edit Profile</button>
+                                            <!-- The Modal -->
+                                            <div id="myModal" class="modal">
+
+                                            <!-- Modal content -->
+                                            <div class="modal-content">
+                                                <span class="close">×</span>
+                                                <form name ="update-user" action="update-user" method="post">
+                                                <img id="profilePic" src="images/profile-pic.jpg" alt="Profile Picture" style="width:100px;height:100px;"><br>
+                                                <label for="img">Select image:</label>
+                                                <input type="file" id="img" name="img" accept="image/*"><br>
+                                                <label for="username">Username:</label><br>
+                                                <input type="text" id="username" name="username"><br>
+                                                <label for="fname">First Name:</label><br>
+                                                <input type="text" id="fname" name="fname"><br>
+                                                <label for="lname">Last Name:</label><br>
+                                                <input type="text" id="lname" name="lname"><br>
+                                                <label for="desc">Short Description:</label><br>
+                                                <textarea id="desc" name="desc"></textarea><br>
+                                                <input type="submit" value="Save Changes">
+                                                </form>
+                                            </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="middle-container">
+                            <div class="bio-container">
+                                <div class="bio">
+                                   {{description}}
+                                </div>
+                                <hr>
+                            </div>
+                        </div>
+                        {{/each}}
+                        <div class="bottom-middle-container">
+                            <div class="bottom-middle">
+                                <ul class = "ul"> </ul>
+                                <ul class = "ul-curr"> Comments </ul>
+                                <ul class = "ul"> </ul>
+                            </div>
+                        </div>
+
+                        
+                        <div class="bottom-container">
+                            
+                            <div class="bottom">
+                            {{#each commentData}}
+                            
+                                <div class="review-container">
+                                    <div class="review">
+                                        
+                                        <div class="bottom-left-container">
+                                            <div class="left">
+                                                <div class="bottom-top-container">
+                                                    <div class="bottom-top">
+                                                        <div class="bottom-top-left-container">
+                                                            
+                                                            <div class="bottom-top-left">
+                                                                <img src="{{../userData.0.avatar_img}}" alt="" class="bottom-top-left-photo">
+                                                            </div>
+                                                            
+                                                        </div>
+                                                        <div class="bottom-top-middle-container">
+                                                            <div class="bottom-top-middle">
+                                                               
+                                                                <div class="bottom-top-name">
+                                                                    {{../userData.0.username}}
+                                                                    
+                                                                </div>
+                                                                
+                                                                <div class="bottom-top-username">
+                                                                    {{username}}
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="bottom-top-right-container">
+                                                            <div class="bottom-top-right">
+                                                                <div class="bottom-top-right-setting-container">
+                                                                  <div class="settings">
+                                                                    <div class="dropdown">
+                                                                        <button class="settings-button">
+                                                                            <span class="material-symbols-outlined">
+                                                                                more_horiz
+                                                                                </span>
+                                                                        </button>
+                                                                        <div class="content">
+                                                                            
+                                                                        <button class="edit-button">Edit</button>
+                                                                        <dialog class="edit-popup-container">
+                                                                            <div class="edit-popup-box">
+                                                                            <div class="edit-toprow">
+                                                                                <div class="edit-close-button-container">
+                                                                                <button class="edit-popup-close-button">X</button>
+                                                                                </div>
+                                                                                <div class="edit-popup-header">Edit Post</div>
+                                                                            </div>
+                                                                            <form name="update-comment" action="/update-comment" method="post" data-modal-id="{{@index}}">
+                                                                            <div class="post-popup-first-row">
+                                                                                <div class="post-popup-profile">
+                                                                                <img src="images/profile-pic.jpg" alt="" class="post-popup-profile-photo">
+                                                                                </div>
+                                                                                <div class="post-popup-rating">
+                                                                                <div class="rating-random">
+                                                                                    <div class="rating-1">
+                                                                                    <div class="rating-food">
+                                                                                        <div class="food-text-2">Food</div>
+                                                                                        <div class="rating-box">
+                                                                                        <div class="stars" id = "food-stars-{{@index}}"> 
+                                                                                            <i id="food" class="fa-solid fa-star"></i>
+                                                                                            <i id="food" class="fa-solid fa-star"></i>
+                                                                                            <i id="food" class="fa-solid fa-star"></i>
+                                                                                            <i id="food" class="fa-solid fa-star"></i>
+                                                                                            <i id="food" class="fa-solid fa-star"></i>
+                                                                                        </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="rating-ambiance">
+                                                                                        <div class="ambiance-text-2">Ambiance</div>
+                                                                                        <div class="rating-box">
+                                                                                        <div class="stars" id = "ambiance-stars-{{@index}}">
+                                                                                            <i id="ambiance" class="fa-solid fa-star"></i>
+                                                                                            <i id="ambiance" class="fa-solid fa-star"></i>
+                                                                                            <i id="ambiance" class="fa-solid fa-star"></i>
+                                                                                            <i id="ambiance" class="fa-solid fa-star"></i>
+                                                                                            <i id="ambiance" class="fa-solid fa-star"></i>
+                                                                                        </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="rating-random-2">
+                                                                                    <div class="rating-2">
+                                                                                    <div class="rating-service">
+                                                                                        <div class="service-text-2">Service</div>
+                                                                                        <div class="rating-box">
+                                                                                        <div class="stars" id = "service-stars-{{@index}}">
+                                                                                            <i id="service" class="fa-solid fa-star"></i>
+                                                                                            <i id="service" class="fa-solid fa-star"></i>
+                                                                                            <i id="service" class="fa-solid fa-star"></i>
+                                                                                            <i id="service" class="fa-solid fa-star"></i>
+                                                                                            <i id="service" class="fa-solid fa-star"></i>
+                                                                                        </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="rating-overall">
+                                                                                        <div class="overall-text-2">Overall</div>
+                                                                                        <div class="rating-box">
+                                                                                        <div class="stars" id = "overall-stars-{{@index}}">
+                                                                                            <i id="overall" class="fa-solid fa-star"></i>
+                                                                                            <i id="overall" class="fa-solid fa-star"></i>
+                                                                                            <i id="overall" class="fa-solid fa-star"></i>
+                                                                                            <i id="overall" class="fa-solid fa-star"></i>
+                                                                                            <i id="overall" class="fa-solid fa-star"></i>
+                                                                                        </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            
+                                                                                <input type="hidden" name="id" value="{{_id}}"/>
+                                                                            <div class="post-popup-middle">
+                                                                                <div class="post-popup-title">
+                                                                                <label class="custom-field" for="title">
+                                                                                    <input type="text" id="title" name="title" required>
+                                                                                    <span class="placeholder">Enter Title</span>
+                                                                                </label>
+                                                                                </div>
+                                                                                <div class="post-popup-desc">
+                                                                                <textarea class="textarea" name="desc" id="desc" placeholder="Type your comment here..."></textarea>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="post-popup-bottom-container">
+                                                                                <div class="post-popup-bottom">
+                                                                                <div class="imageleft">
+                                                                                    <label for="file-input">
+                                                                                    <img src="images/add-pic.png" alt="" class="addphoto">
+                                                                                    </label>
+                                                                                    <input id="file-input" type="file" style="display: none;">
+                                                                                </div>
+                                                                                <div class="save-post">
+                                                                                    <button type="submit" value="submit" class="save-post-popup-edit">Save</button>
+                                                                                    {{!-- <input type="submit" value="Save Changes"> --}}
+                                                                                </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            </div>
+                                                                            </form>
+                                                                        </dialog>
+                                                                        <button class="del-button">Delete</button>
+                                                                        <dialog class="delete-popup-container">
+                                                                            <div class="delete-whole">
+                                                                            <div class="delete-header">DELETE POST?</div>
+                                                                            <div class="delete-middle">This can't be undone and it will be removed from your profile, the timeline of any accounts that follow you, and from search results.</div>
+                                                                            <div class="delete-bottom">
+                                                                                <button class="confirm-del-button">Delete</button>
+                                                                                <button class="cancel-del-button">Cancel</button>
+                                                                            </div>
+                                                                            </div>
+                                                                        </dialog>
+                                                                        </div>
+                                                                    </div>
+                                                                    </div>
+
+
+
+
+
+
+
+
+
+                                                                </div>
+                                                                <div class="bottom-top-right-date-container">
+                                                                    <div class="bottom-top-right-date">
+                                                                        February 9, 2024
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="bottom-left-middle-container">
+                                                    <div class="bottom-left-middle-title-container">
+                                                        <div class="bottom-left-middle-title">
+                                                            {{title}}
+                                                        </div>
+                                                    </div>
+                                                    <div class="bottom-left-middle-description-container">
+                                                        <div class="bottom-left-middle-description">
+                                                            {{content}}
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="bottom-left-last">
+                                                    <div class="rating-random">
+                                                        <div class="rating-1">
+                                                          <div class="rating-food">
+                                                            <div class="food-text">
+                                                              Food
+                                                            </div>
+                                                            
+                                                            <div class="stars-rating">
+                                                                {{#each food-stars}}
+                                                              <img src="images/star.png" alt="" class="stars-1">
+                                                                {{/each}}
+                                                            </div>
+                                                          </div>
+                                                          <div class="rating-ambiance">
+                                                            Ambiance
+                                                            <div class="stars-rating">
+                                                              {{#each ambiance-stars}}
+                                                              <img src="images/star.png" alt="" class="stars-1">
+                                                                {{/each}}
+                                                            </div>
+                                                          </div>
+                                                        </div>
+                                                      </div>
+                                                      <div class="rating-random-2">
+                                                        <div class="rating-2">
+                                                          <div class="rating-service">
+                                                            Service
+                                                            <div class="stars-rating">
+                                                              {{#each service-stars}}
+                                                              <img src="images/star.png" alt="" class="stars-1">
+                                                                {{/each}}
+                                                            </div>
+                                                          </div>
+                                                          <div class="rating-overall">
+                                                            <div class="overall-text">
+                                                              Overall
+                                                            </div>
+                                                            <div class="stars-rating">
+                                                              {{#each overall-stars}}
+                                                              <img src="images/star.png" alt="" class="stars-1">
+                                                                {{/each}}
+                                                            </div>
+                                                          </div>
+                                                        </div>      
+                                                </div>
+
+                                            
+                                                    
+                                            </div>
+                                            </div>    
+                                        </div>   
+                                        <div class="bottom-right-container">
+                                            <div class="right">
+                                                <div class="review-right">
+                                                    <div class="review-pic">
+                                                
+                                                      <img src="{{comment-img}}" alt="" class="review-photo">
+                                                    </div>
+                                                    <div class="vote">
+                                        
+                                                      <div class="post-ratings-container">
+                                                        <div class="post-rating">
+                                                         <span class="helpful">Helpful? </span>  
+                                                          <span class="post-rating-button material-icons">thumb_up</span>
+                                                          <span class="post-rating-count">{{numLike}}</span>
+                                                        </div>
+                                                        
+                                                        <div class="post-rating">
+                                                          <span class="post-rating-button material-icons">thumb_down</span>
+                                                          <span class="post-rating-count">{{numDislike}}</span>
+                                                        </div>
+                                                      </div>
+                                        
+                                        
+                                        
+                                                      
+                                                    </div>
+                                                  </div>
+                                            </div>
+                                        </div>
+            
+                                    </div>
+                                    
+                                </div>
+                                {{/each}}
+                            </div>
+                            
+                        </div>
+                            </div>
+                        </div>
+ 
+                        
+                        <div class="discover-header-container">
+                        <div class="discover-header">
+                        Discover
+                        </div>
+                        <div class="whole-discover">
+                        {{#each restoData}}
+                                  <div class="establishment-container">
+                                    <div class="establishment">
+                                        <div class="establishment-last-name">
+                                            {{restoName}}
+                                        </div>
+                                        <div class="num-post-container">
+                                            <div class="num-post">
+                                                {{numPost}} post
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="rating-container-discover">
+                                        <div class="rating-discover">
+                                            {{main_rating}} out of 5
+                                        </div>
+                                        <div class="star-rating-discover">
+                                            {{#each rating-stars}}
+                                            <img src="images/star.png" alt="" class="stars-1">
+                                            {{/each}}
+                                        </div>
+                                    </div>
+                                </div>
+                        {{/each}}          <!-- 5tj-->
+                    </div>  
+                </div>
+            </div>
+        </div>
